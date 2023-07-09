@@ -16,6 +16,15 @@ class HomePage extends StatelessWidget {
     'Restaurants'
   ];
 
+  List destinations = [
+    {'name': "City 1", "img": "assets/city1.jpg"},
+    {'name': "City 2", "img": "assets/city2.jpg"},
+    {'name': "City 3", "img": "assets/city3.jpg"},
+    {'name': "City 4", "img": "assets/city4.jpg"},
+    {'name': "City 5", "img": "assets/city5.jpg"},
+    {'name': "City 6", "img": "assets/city6.jpg"},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +42,7 @@ class HomePage extends StatelessWidget {
                 height: 200,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 6,
+                    itemCount: destinations.length,
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       return InkWell(
@@ -46,8 +55,7 @@ class HomePage extends StatelessWidget {
                               color: Colors.black,
                               borderRadius: BorderRadius.circular(15),
                               image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/city${index + 1}.jpg'),
+                                  image: AssetImage(destinations[index]['img']),
                                   fit: BoxFit.cover,
                                   opacity: 0.7)),
                           child: Column(children: [
@@ -62,9 +70,9 @@ class HomePage extends StatelessWidget {
                             const Spacer(),
                             Container(
                               alignment: Alignment.bottomLeft,
-                              child: const Text(
-                                "City name",
-                                style: TextStyle(
+                              child: Text(
+                                destinations[index]['name'],
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600),
