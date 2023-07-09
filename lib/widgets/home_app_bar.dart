@@ -34,7 +34,7 @@ class HomeAppBar extends StatelessWidget {
                 color: Colors.deepOrange[400],
               ),
               const Text(
-                'Daet, Camarines Norte',
+                'Camarines Norte, Bicol',
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
               )
             ],

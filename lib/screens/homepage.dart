@@ -1,6 +1,8 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:daex_travel_app/screens/post_screen.dart';
 import 'package:daex_travel_app/widgets/home_app_bar.dart';
+import 'package:daex_travel_app/widgets/home_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,12 +19,12 @@ class HomePage extends StatelessWidget {
   ];
 
   List destinations = [
-    {'name': "City 1", "img": "assets/city1.jpg"},
-    {'name': "City 2", "img": "assets/city2.jpg"},
-    {'name': "City 3", "img": "assets/city3.jpg"},
-    {'name': "City 4", "img": "assets/city4.jpg"},
-    {'name': "City 5", "img": "assets/city5.jpg"},
-    {'name': "City 6", "img": "assets/city6.jpg"},
+    {'name': "City 1", 'rating': 4.5, "img": "assets/city1.jpg"},
+    {'name': "City 2", 'rating': 4.1, "img": "assets/city2.jpg"},
+    {'name': "City 3", 'rating': 4.3, "img": "assets/city3.jpg"},
+    {'name': "City 4", 'rating': 5.0, "img": "assets/city4.jpg"},
+    {'name': "City 5", 'rating': 3.9, "img": "assets/city5.jpg"},
+    {'name': "City 6", 'rating': 4.8, "img": "assets/city6.jpg"},
   ];
 
   @override
@@ -46,7 +48,12 @@ class HomePage extends StatelessWidget {
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       return InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const PostScreen()));
+                        },
                         child: Container(
                           width: 160,
                           padding: const EdgeInsets.all(20),
@@ -111,11 +118,74 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: destinations.length,
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Column(
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const PostScreen()));
+                          },
+                          child: Container(
+                            height: 200,
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(15),
+                                image: DecorationImage(
+                                    image:
+                                        AssetImage(destinations[index]['img']),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  destinations[index]['name'],
+                                  style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                                const Icon(Icons.more_vert)
+                              ]),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            const Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                              size: 20,
+                            ),
+                            Text("${destinations[index]['rating'].toString()}")
+                          ],
+                        )
+                      ],
+                    ),
+                  );
+                },
               )
             ],
           ),
         ),
       )),
+      bottomNavigationBar: const HomeBottomBar(),
     );
   }
 }
