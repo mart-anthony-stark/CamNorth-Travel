@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:daex_travel_app/widgets/home_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -5,7 +7,7 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   static const routeName = "/home";
-  List categories = [
+  List<String> categories = [
     'Best Places',
     'Most Visited',
     'Favorites',
@@ -93,7 +95,7 @@ class HomePage extends StatelessWidget {
                                 BoxShadow(color: Colors.black26, blurRadius: 6)
                               ]),
                           child: Text(
-                            "${categories[i]}",
+                            categories[i],
                             style: const TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.w500),
                           ),
