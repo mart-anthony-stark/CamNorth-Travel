@@ -1,5 +1,5 @@
-import 'package:daex_travel_app/widgets/post_app_bar.dart';
-import 'package:daex_travel_app/widgets/post_bottom_bar.dart';
+import 'package:camnorth_travel/widgets/post_app_bar.dart';
+import 'package:camnorth_travel/widgets/post_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 class PostScreen extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:daex_travel_app/screens/homepage.dart';
-import 'package:daex_travel_app/screens/onboarding_screen.dart';
+import 'package:camnorth_travel/screens/homepage.dart';
+import 'package:camnorth_travel/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

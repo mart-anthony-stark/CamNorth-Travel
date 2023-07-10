@@ -12,7 +12,7 @@ class HomeBottomBar extends StatelessWidget {
       items: const <Widget>[
         Icon(Icons.person_outline, size: 30),
         Icon(Icons.favorite_outline, size: 30),
-        Icon(Icons.home, size: 30, color: Colors.redAccent),
+        Icon(Icons.home, size: 30, color: Colors.blue),
         Icon(Icons.location_city, size: 30),
         Icon(Icons.list, size: 30),
       ],

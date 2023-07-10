@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:daex_travel_app/screens/post_screen.dart';
-import 'package:daex_travel_app/widgets/home_app_bar.dart';
-import 'package:daex_travel_app/widgets/home_bottom_bar.dart';
+import 'package:camnorth_travel/screens/post_screen.dart';
+import 'package:camnorth_travel/widgets/home_app_bar.dart';
+import 'package:camnorth_travel/widgets/home_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -19,10 +19,14 @@ class HomePage extends StatelessWidget {
   ];
 
   List destinations = [
-    {'name': "City 1", 'rating': 4.5, "img": "assets/city1.jpg"},
-    {'name': "City 2", 'rating': 4.1, "img": "assets/city2.jpg"},
-    {'name': "City 3", 'rating': 4.3, "img": "assets/city3.jpg"},
-    {'name': "City 4", 'rating': 5.0, "img": "assets/city4.jpg"},
+    {'name': "Calaguas Island", 'rating': 4.5, "img": "assets/calaguas.png"},
+    {
+      'name': "Pulang Daga Beach",
+      'rating': 4.3,
+      "img": "assets/pulangdaga.jpg"
+    },
+    {'name': "Apuao Grande", 'rating': 4.1, "img": "assets/apuao-grande.JPG"},
+    {'name': "Bagasbas Beach", 'rating': 5.0, "img": "assets/camnorth-3.jpg"},
     {'name': "City 5", 'rating': 3.9, "img": "assets/city5.jpg"},
     {'name': "City 6", 'rating': 4.8, "img": "assets/city6.jpg"},
   ];

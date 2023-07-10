@@ -1,4 +1,4 @@
-import 'package:daex_travel_app/screens/homepage.dart';
+import 'package:camnorth_travel/screens/homepage.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatelessWidget {
