@@ -68,6 +68,7 @@ class _UserLocationScreenState extends State<UserLocationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Location')),
       body: StreamBuilder<Map<String, dynamic>>(
         stream: _locationStreamController.stream,
         initialData: userPosition,
