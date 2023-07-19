@@ -1,3 +1,4 @@
+import 'package:camnorth_travel/screens/user_location_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeAppBar extends StatelessWidget {
@@ -27,17 +28,22 @@ class HomeAppBar extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            children: [
-              Icon(
-                Icons.location_on,
-                color: Colors.deepOrange[400],
-              ),
-              const Text(
-                'Camarines Norte, Bicol',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-              )
-            ],
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(UserLocationScreen.routeName);
+            },
+            child: Row(
+              children: [
+                Icon(
+                  Icons.location_on,
+                  color: Colors.deepOrange[400],
+                ),
+                const Text(
+                  'Camarines Norte, Bicol',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
           ),
           InkWell(
             onTap: () {},

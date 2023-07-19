@@ -11,6 +11,9 @@ dependencies:
     sdk: flutter
   get:
   curved_navigation_bar: ^1.0.3
+  flutter_map:
+  latlong2:
+  geolocator: ^9.0.2
 
 dev_dependencies:
   flutter_test:

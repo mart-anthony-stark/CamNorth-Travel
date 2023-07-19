@@ -1,5 +1,6 @@
 import 'package:camnorth_travel/screens/homepage.dart';
 import 'package:camnorth_travel/screens/onboarding_screen.dart';
+import 'package:camnorth_travel/screens/user_location_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -29,7 +30,8 @@ class _MainAppState extends State<MainApp> {
       initialRoute: "/onboarding",
       routes: {
         OnboardingScreen.routeName: (context) => const OnboardingScreen(),
-        HomePage.routeName: (context) => HomePage()
+        HomePage.routeName: (context) => HomePage(),
+        UserLocationScreen.routeName: (context) => const UserLocationScreen()
       },
     );
   }
