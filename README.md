@@ -1,3 +1,3 @@
-# daex_travel_app
+# CamNorth Travel App
 
 A new Flutter project.
